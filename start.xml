@@ -52,7 +52,7 @@
 	<CMD cmd="userVariable.serviceKey = 'rZ739hfRoC%2BqtLgI9QC6r8RCVKC8NqRXd5ILUnOeaqQFDBQn%2BDXL%2BcXjYWEyf9%2BHY7JqpODQZdSFsynHv0Hj8Q%3D%3D'" />
 	<FUNCTION id="search">
 		<RETURN condition="latitude.text == 0 or longitude.text == 0" cmd="device.systemPopup('현위치를 확인하거나 직접 좌표를 입력하세요.')" />
-		<CMD cmd="url = 'http://openapi.e-gen.or.kr/openapi/service/rest/HsptlAsembySearchService/getHsptlMdcncLcinfoInqire?ServiceKey=' + userVariable.serviceKey"/>
+		<CMD cmd="url = 'http://openapi.e-gen.or.kr/openapi/service/rest/HsptlAsembySearchService/getHsptlMdcncLcinfoInqire?ServiceKey='rZ739hfRoC%2BqtLgI9QC6r8RCVKC8NqRXd5ILUnOeaqQFDBQn%2BDXL%2BcXjYWEyf9%2BHY7JqpODQZdSFsynHv0Hj8Q%3D%3D"/>
 		<CMD cmd="url = url + '&amp;WGS84_LAT=' + latitude.text"/>
 		<CMD cmd="url = url + '&amp;WGS84_LON=' + longitude.text"/>
 		<CMD cmd="url = url + '&amp;pageNo=1&amp;numOfRows=100'"/>
