@@ -49,7 +49,7 @@
 
 	<!-- https://www.data.go.kr 에서 오픈API - 전국 병‧의원 찾기 서비스의 [SERVICE KEY]를 발급 받아야 합니다. -->
 	<!-- 다른 사람의 키를 사용할 경우 트래픽을 초과하거나 변경되면 동작하지 않게됩니다.-->
-	<CMD cmd="userVariable.serviceKey = 'rZ739hfRoC%2BqtLgI9QC6r8RCVKC8NqRXd5ILUnOeaqQFDBQn%2BDXL%2BcXjYWEyf9%2BHY7JqpODQZdSFsynHv0Hj8Q%3D%3D'" />
+	<CMD cmd="userVariable.serviceKey = 'Z739hfRoC%2BqtLgI9QC6r8RCVKC8NqRXd5ILUnOeaqQFDBQn%2BDXL%2BcXjYWEyf9%2BHY7JqpODQZdSFsynHv0Hj8Q%3D%3D'" />
 	<FUNCTION id="search">
 		<RETURN condition="latitude.text == 0 or longitude.text == 0" cmd="device.systemPopup('현위치를 확인하거나 직접 좌표를 입력하세요.')" />
 		<CMD cmd="url = 'http://openapi.e-gen.or.kr/openapi/service/rest/HsptlAsembySearchService/getHsptlMdcncLcinfoInqire?ServiceKey=' + userVariable.serviceKey"/>
