@@ -63,11 +63,10 @@
 	</FUNCTION>
 	
 	<FUNCTION id="findLocation">
-		<CMD cmd="status=device.gps.status"/>
-		<RETURN condition="not (status == 'enabled' || status == 'gpsOnly' || status == 'networkOnly' || status == 'notDetermined')" cmd="device.systemPopup('GPS를 켜주세요.')" />
-		<CMD cmd="device.gps.addEventListener('onChange', 'function.onGpsChange')"/>
-		<CMD cmd="device.gps.start"/>
-	</FUNCTION>
+  	<RETURN condition="device.gps.status == 'disabled'" cmd="device.systemPopup('GPS를 켜주세요.')" />
+  	<CMD cmd="device.gps.addEventListener('onChange', 'function.onGpsChange')"/>
+  	<CMD cmd="device.gps.start"/>
+ 	</FUNCTION>
 	<FUNCTION id="toTime(str)">
 		<RETURN cmd="string.sub(str, 0, 2) + ':' + string.sub(str, 2, 2) " />
 	</FUNCTION >
